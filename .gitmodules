@@ -1,4 +1,0 @@
-[submodule "omnistack-instarocket"]
-	path = omnistack-instarocket
-	url = https://github.com/ygorazambuja/omnistack-instarocket
-	branch = master
