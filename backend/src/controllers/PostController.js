@@ -27,7 +27,7 @@ module.exports = {
 			place,
 			description,
 			hashtags,
-			filename,
+			image: filename,
 		});
 
 		req.io.emit("post", post);
