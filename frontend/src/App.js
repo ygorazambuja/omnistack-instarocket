@@ -6,10 +6,10 @@ import Header from "./components/Header";
 // import { Container } from './styles';
 
 export default function App() {
-	return (
-		<BrowserRouter>
-			<Header />
-			<Routes />
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes />
+    </BrowserRouter>
+  );
 }
