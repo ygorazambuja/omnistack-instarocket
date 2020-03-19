@@ -26,16 +26,15 @@ export default class pages extends Component {
 
   registerToSocket = () => {
     const socket = io("http://localhost:3333");
+    
     socket.on("post", newPost => {
       this.setState({ feed: [newPost, ...this.state.feed] });
     });
 
-    socket.on("like", likedPost => {
-      console.log(likedPost);
-
+    socket.on("like", data => {
       this.setState({
         feed: this.state.feed.map(post =>
-          post._id === likedPost ? likedPost : post
+          post._id === data._id ? data : post
         )
       });
     });

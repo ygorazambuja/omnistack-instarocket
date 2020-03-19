@@ -8,7 +8,7 @@ const app = express();
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
-mongoose.connect(db.URL, { useNewUrlParser: true });
+mongoose.connect(db.URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use((req, res, next) => {
 	req.io = io;
