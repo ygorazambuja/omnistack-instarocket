@@ -25,7 +25,7 @@ export default class pages extends Component {
   };
 
   registerToSocket = () => {
-    const socket = io("http://localhost:3333");
+    const socket = io("http://localhost:3000");
     socket.on("post", newPost => {
       this.setState({ feed: [newPost, ...this.state.feed] });
     });
@@ -53,7 +53,7 @@ export default class pages extends Component {
               <img src={more} alt="Mais" />
             </header>
             <img
-              src={`http://localhost:3333/files/${post.image}`}
+              src={`http://localhost:3000/files/${post.image}`}
               alt="Figura"
             />
             <footer>
